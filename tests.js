@@ -11,15 +11,6 @@ const assert = require('assert');
                 assert.equal(actual, 'Покер');
             });
             it('should return `Покер` for [4, 4, 4, 4, 4]', () =>
-            {
-                const actual = getPokerHand([4, 4, 4, 4, 4]);
-                assert.equal(actual, 'Покер');
-            });
-            it('should return `Покер` for [6, 6, 6, 6, 6]', () =>
-            {
-                const actual = getPokerHand([6, 6, 6, 6, 6]);
-                assert.equal(actual, 'Покер');
-            });
         });
  
  
@@ -27,14 +18,6 @@ const assert = require('assert');
             it('should return `Каре` for [1, 1, 1, 1, 5]', () =>
             {
                 const actual = getPokerHand([1, 1, 1, 1, 5]);
-                assert.equal(actual, 'Каре');
-            });
-            it('should return `Каре` for [4, 2, 4, 4, 4]', () =>{
-				const actual = getPokerHand([4, 2, 4, 4, 4]);
-                assert.equal(actual, 'Каре');
-            });
-            it('should return `Каре` for [6, 6, 6, 6, 1]', () =>{
-                const actual = getPokerHand([6, 6, 6, 6, 1]);
                 assert.equal(actual, 'Каре');
             });
         });
@@ -45,28 +28,12 @@ const assert = require('assert');
                 const actual = getPokerHand([1, 1, 1, 2, 2]);
                 assert.equal(actual, 'Фулл хаус');
             });
-            it('should return `Фулл хаус` for [4, 3, 4, 3, 4]', () =>{
-                const actual = getPokerHand([4, 3, 4, 3, 4]);
-                assert.equal(actual, 'Фулл хаус');
-            });
-            it('should return `Фулл хаус` for [5, 5, 6, 6, 6]', () =>{
-                const actual = getPokerHand([5, 5, 6, 6, 6]);
-                assert.equal(actual, 'Фулл хаус');
-            });
         });
 
         describe('Тройка', () => {
             it('should return `Тройка` for [1, 1, 1, 2, 3]', () => {
                 const actual = getPokerHand([1, 1, 1, 2, 3]);
                 assert.equal(actual, 'Тройка');
-            });
-            it ('should return `Тройка` for [1, 2, 2, 3, 2]', () => {
-                const actual = getPokerHand([1, 2, 2, 3, 2]);
-                assert.equal(actual, 'Тройка');
-            });
-            it ('should return `Тройка` for [4, 5, 6, 6, 6]', () => {
-                const actual = getPokerHand([4, 5, 6, 6, 6]);
-                assert.equal(actual, 'Тройка')
             });
         });
 
@@ -75,35 +42,11 @@ const assert = require('assert');
                 const actual = getPokerHand([1, 1, 2, 2, 3]);
                 assert.equal(actual, 'Две пары');
             });
-            it('should return `Две пары` for [2, 3, 3, 4, 2]', () =>{
-                const actual = getPokerHand([2, 3, 4, 3, 2]);
-                assert.equal(actual, 'Две пары');
-            });
-            it('should return `Две пары` for [6, 5, 5, 4, 4]', () =>{
-                const actual = getPokerHand([6, 5, 5, 4, 4]);
-                assert.equal(actual, 'Две пары');
-            });
         });
 
         describe('Пара', () => {
-            it('should return `Пара` for [1, 1, 2, 3, 4]', () => {
-                const actual = getPokerHand([1, 1, 2, 3, 4]);
-                assert.equal(actual, 'Пара');
-            });
-            it('should return `Пара` for [1, 2, 1, 4, 6]', () => {
-                const actual = getPokerHand([1, 2, 1, 4, 6]);
-                assert.equal(actual, 'Пара');
-            });
             it('should return `Пара` for [1, 6, 2, 6, 3]', () => {
                 const actual = getPokerHand([1, 6, 2, 6, 3]);
-                assert.equal(actual, 'Пара');
-            });
-            it('should return `Пара` for [1, 5, 2, 6, 5]', () => {
-                const actual = getPokerHand([1, 5, 2, 6, 5]);
-                assert.equal(actual, 'Пара');
-            });
-            it('should return `Пара` for [4, 3, 5, 1, 4]', () => {
-                const actual = getPokerHand([4, 3, 5, 1, 4]);
                 assert.equal(actual, 'Пара');
             });
         });
@@ -111,14 +54,6 @@ const assert = require('assert');
         describe('Наивысшее очко', () => {
             it('should return `Наивысшее очко` for [1, 2, 3, 4, 5]', () => {
                 const actual = getPokerHand([1, 2, 3, 4, 5]);
-                assert.equal(actual, 'Наивысшее очко');
-            });
-            it('should return `Наивысшее очко` for [1, 5, 4, 2, 6]', () => {
-                const actual = getPokerHand([1, 5, 4, 2, 6]);
-                assert.equal(actual, 'Наивысшее очко');
-            });
-            it('should return `Наивысшее очко` for [1, 5, 4, 2, 3]', () => {
-                const actual = getPokerHand([1, 5, 4, 6, 3]);
                 assert.equal(actual, 'Наивысшее очко');
             });
         });
